@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH 3316 Final Exam Review</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+        h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        .section-note {
+            font-style: italic;
+            color: #666;
+            background-color: #eef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .proof-group {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .consultant-note {
+            background-color: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MATH 3316: Final Exam Review</h1>
+
+    <h2>Part I: Definitions (Memorize Verbatim)</h2>
+    <div class="section-note">
+        Be able to state these precisely and all related versions. negations are also fair game.
+    </div>
+
+    <h3>The Real Number System</h3>
+    <ul>
+        <li><strong>Completeness Axiom:</strong> Every nonempty set of real numbers that is bounded above has a least upper bound (supremum).</li>
+        <li><strong>Supremum/Infimum:</strong> The precise definitions of least upper bound and greatest lower bound.</li>
+        <li><strong>Convergence (Sequence):</strong> A sequence \((x_n)\) converges to \(L\) if for every \(\epsilon > 0\), there exists an \(N \in \mathbb{N}\) such that for all \(n \ge N\), \(|x_n - L| < \epsilon\).
+            <br><em>Negation:</em> Be able to state what it means for a sequence <em>not</em> to converge to \(M\).</li>
+        <li><strong>Divergence to \(\pm \infty\):</strong> Definition of a sequence diverging to \(-\infty\) (using \(M < 0\)) or \(+\infty\).</li>
+    </ul>
+
+    <h3>Continuity & Differentiation</h3>
+    <ul>
+        <li><strong>Continuity (Sequential):</strong> A function \(f\) is continuous at \(a\) if for every sequence \((x_n)\) converging to \(a\), the sequence \((f(x_n))\) converges to \(f(a)\).</li>
+        <li><strong>Continuity (\(\epsilon-\delta\)):</strong> \(f\) is continuous at \(a\) if for every \(\epsilon > 0\), there exists \(\delta > 0\) such that if \(|x - a| < \delta\), then \(|f(x) - f(a)| < \epsilon\).</li>
+        <li><strong>Uniform Continuity:</strong> \(f\) is uniformly continuous on \(S\) if for every \(\epsilon > 0\), there exists \(\delta > 0\) such that for all \(x, y \in S\), \(|x - y| < \delta \implies |f(x) - f(y)| < \epsilon\).</li>
+        <li><strong>Differentiability:</strong> \(f\) is differentiable at \(a\) if the limit \(f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}\) exists and is finite.</li>
+        <li><strong>Subsequential Limit:</strong> A number \(J\) is a subsequential limit of \((s_n)\) if there exists a subsequence \((s_{n_k})\) that converges to \(J\).</li>
+    </ul>
+
+    <h2>Part II: Statements to Know & Apply</h2>
+    <div class="section-note">
+        Be able to state these theorems and apply them. Proofs of the theorems themselves are secondary here.
+    </div>
+
+    <h3>Key Theorems</h3>
+    <ul>
+        <li><strong>Bolzano-Weierstrass Theorem:</strong> Every bounded sequence has a convergent subsequence.</li>
+        <li><strong>Monotone Convergence Theorem:</strong> Every bounded monotone sequence converges.</li>
+        <li><strong>Intermediate Value Theorem (IVT):</strong> If \(f\) is continuous on \([a,b]\) and \(y\) is between \(f(a)\) and \(f(b)\), there exists \(c \in (a,b)\) such that \(f(c)=y\).</li>
+        <li><strong>Extreme Value Theorem:</strong> If \(f\) is continuous on a closed interval \([a, b]\), \(f\) attains a maximum and minimum.</li>
+        <li><strong>Rolle’s Theorem / Mean Value Theorem (MVT):</strong> Be able to state these accurately regarding differentiable functions on \((a,b)\).</li>
+    </ul>
+
+    <h3>Conceptual Distinctions</h3>
+    <ul>
+        <li><strong>Continuity vs. Uniform Continuity:</strong> Explain the difference in the dependency of \(\delta\). (In uniform continuity, \(\delta\) depends only on \(\epsilon\), not on the point \(a\)).</li>
+        <li><strong>Limit of Function vs. Continuity:</strong> Discuss similarities and differences between the definition of \(\lim_{x \to a} f(x)\) and continuity at \(a\).</li>
+        <li><strong>Completeness in \(\mathbb{Q}\):</strong> Explain why the Completeness Axiom does not hold in the rationals (e.g., sets bounded above by \(\sqrt{2}\)).</li>
+    </ul>
+
+    <h2>Part III: Examples & Counterexamples</h2>
+    <div class="section-note">
+        Be able to construct these or explain why they cannot exist.
+    </div>
+
+    <h3>Sequences</h3>
+    <ul>
+        <li>A sequence that diverges, but does not diverge to \(\pm \infty\) (e.g., \((-1)^n\)).</li>
+        <li>A bounded divergent sequence.</li>
+        <li>A sequence of positive numbers converging to a negative limit (Impossible).</li>
+        <li>Two sequences where \(s_n \to 0\) and \(t_n\) diverges, but \(s_n t_n \to 0\).</li>
+        <li>A sequence that is neither strictly increasing nor strictly decreasing.</li>
+        <li>A sequence with at least 3 subsequential limits.</li>
+    </ul>
+
+    <h3>Sets and Functions</h3>
+    <ul>
+        <li>A set with no supremum (e.g., \(\mathbb{R}\)) or explain why one can't exist.</li>
+        <li>A set with a finite infimum but no finite supremum.</li>
+        <li>A set with a supremum but no maximum (e.g., \((0,1)\)).</li>
+        <li>A function that is not continuous at a specific point (e.g., piecewise definition).</li>
+    </ul>
+
+    <h2>Part IV: Proofs (The "Core" Skills)</h2>
+
+    <div class="proof-group">
+        <h3>Group A: \(\epsilon-N\) and \(\epsilon-\delta\) Constructions</h3>
+        <ol>
+            <li><strong>Sequence Convergence:</strong> Prove convergence for rational functions.
+                <br><em>Example:</em> Prove \((\frac{3n+1}{n+2}) \to 3\).
+                <br><em>Example:</em> Prove \((\frac{2n}{5n+4}) \to 2/5\).</li>
+            <li><strong>Pointwise Continuity:</strong> Use \(\epsilon-\delta\) to prove continuity for polynomials.
+                <br><em>Example:</em> Prove \(f(x)=x^2+4\) is continuous at \(x=3\).</li>
+            <li><strong>Uniform Continuity:</strong> Prove a function is uniformly continuous on an interval.
+                <br><em>Example:</em> \(f(x)=\frac{1}{x^2}\) on \([1, \infty)\).
+                <br><em>Example:</em> \(f(x)=\sqrt{x}\) on \([1, \infty)\).</li>
+            <li><strong>Discontinuity:</strong> Prove a function is discontinuous at a point.
+                <br><em>Example:</em> Dirichlet-style function \(h(x) = x^2\) for \(x \in \mathbb{Q}\), \(0\) for irrational; prove discontinuous at \(x \neq 0\).</li>
+            <li><strong>Discontinuity:</strong> Prove a function is discontinuous at a point.
+                <br><em>Example:</em> \(f(x)=x-3\) for \(x < 2\) and \(f(x)=4-2x\) for \(x \geq 2\).</li>
+        </ol>
+    </div>
+
+    <div class="proof-group">
+        <h3>Group B: Theoretical & Recursive Proofs</h3>
+        <ol>
+            <li><strong>Recursive Sequences:</strong> Given a recurrence relation (e.g., \(s_{n+1} = \frac{n}{n+1}s_n^2\)):
+                <br>List first few terms. Prove convergence (Monotone Convergence Theorem). Compute the limit.</li>
+            <li><strong>Limit Laws:</strong> Prove that if \(s_n \to s\) and \(t_n \to t\), then \(s_n - t_n \to s-t\) (or sum/product).</li>
+            <li><strong>Supremum Properties:</strong>
+                <br>If \(S\) is bounded below but has no minimum, prove there exists a sequence in \(S\) converging to \(\inf(S)\).
+                <br>If \(A \subset B\), prove \(\sup(A) \le \sup(B)\).</li>
+            <li><strong>Intermediate Value Theorem:</strong>
+                <br>Apply IVT to show a root exists (e.g., \(\frac{x}{2} = \sin(x)\)).
+                <br>Given \(f(a) \ge g(a)\) and \(f(b) \le g(b)\), prove \(f(c) = g(c)\).</li>
+            <li><strong>Differentiation:</strong> Prove the Product Rule or differentiability of a piecewise function at 0.</li>
+            <li><strong>Subsequences:</strong> Prove every sequence has a monotonic subsequence.</li>
+        </ol>
+    </div>
+
+</body>
+</html>
